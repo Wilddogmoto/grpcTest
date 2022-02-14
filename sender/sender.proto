@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "./sender;sender";
+
+package sender;
+
+service Sender {
+  rpc SendMessage (InMessage) returns (OutMessage);
+}
+
+message InMessage{
+  string Message = 1;
+}
+
+message OutMessage{
+  string Message = 1;
+}
